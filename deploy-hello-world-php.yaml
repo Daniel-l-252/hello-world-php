@@ -5,7 +5,7 @@ metadata:
     app: hello-world-php
   name: hello-world-php
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: hello-world-php
