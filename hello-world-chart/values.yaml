@@ -7,4 +7,4 @@ image:
 
 service:
   type: NodePort
-  nodePort: 30001
+  # nodePort: 30001
