@@ -5,7 +5,7 @@ metadata:
     app: hello-world-php
   name: hello-world-php
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: hello-world-php
@@ -18,6 +18,6 @@ spec:
       containers:
       - image: hello-world-php
         name: hello-world-php
-        imagePullPolicy: Always  # Diese Zeile wurde hinzugefügt
         resources: {}
+        imagePullPolicy: Never  # Diese Zeile wurde hinzugefügt
 status: {}
