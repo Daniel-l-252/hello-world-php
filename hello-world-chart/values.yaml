@@ -1,0 +1,10 @@
+replicaCount: 3
+
+image:
+  repository: hello-world-php
+  tag: latest
+  pullPolicy: Never
+
+service:
+  type: NodePort
+  nodePort: 30001
