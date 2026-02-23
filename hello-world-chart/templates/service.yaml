@@ -4,10 +4,12 @@ metadata:
   name: {{ .Release.Name }}-service
 spec:
   type: {{ .Values.service.type }}
+  selector:                  # <--- Das hat gefehlt!
+    app: {{ .Release.Name }} # <--- Verknüpft den Service mit den Pods
   ports:
-      - protocol: TCP
-        port: 80
-        targetPort: 80
-        {{- if .Values.service.nodePort }}
-        nodePort: {{ .Values.service.nodePort }}
-        {{- end }}
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      {{- if .Values.service.nodePort }}
+      nodePort: {{ .Values.service.nodePort }}
+      {{- end }}
